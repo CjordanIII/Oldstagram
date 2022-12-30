@@ -1,0 +1,71 @@
+body{
+    width: 375px;
+    margin: auto;
+    font-family: sans-serif;
+}
+/* header */
+#logo{
+    width: 127px;
+    height: 33.02px; 
+    margin: 16px auto 17px 15px;
+    position: absolute;
+}
+
+.profile-icon{
+    width: 34px;
+    height: 34px;
+    border: none;
+    margin: 16px 16px 17px 325px;
+    position: absolute;
+}
+
+.container-1{
+    width: 375px;
+    height: 67px;
+    border-bottom: solid 1px#C6C6C6;
+    
+}
+
+/* second header */
+
+.img-avatar{
+    margin-top: auto;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    margin: 10px auto auto 10px;
+}
+
+p{
+    display: inline;
+}
+#username{
+    margin: 13px auto auto 7px;
+    position: absolute;
+}
+
+#location{
+    margin: 27px auto auto 7px;
+}
+
+#profile-pic{
+    width: 375px;
+    height: 375px;
+    margin-top: 11px;
+}
+
+.container-2{
+    margin: 9px 260px auto 10px;
+}
+
+.likes{
+    margin: 11px auto auto 13px;
+}
+
+.comment{
+    margin: 12px auto auto 13px;
+}
+
+#comment-username{
+    font-weight: bold;
+}
