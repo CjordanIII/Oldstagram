@@ -36,17 +36,16 @@ body{
     margin: 10px auto auto 10px;
 }
 
-p{
-    display: inline;
-}
 #username{
     margin: 13px auto auto 7px;
     position: absolute;
+    font-weight: bold;
 }
 
 #location{
     margin: 27px auto auto 7px;
 }
+/* post */
 
 #profile-pic{
     width: 375px;
@@ -55,17 +54,54 @@ p{
 }
 
 .container-2{
-    margin: 9px 260px auto 10px;
+    margin: 9px 228px auto 10px;
 }
-
+/* bottom three buttons */
 .likes{
     margin: 11px auto auto 13px;
+    font-weight: bold;
 }
 
 .comment{
     margin: 12px auto auto 13px;
+
 }
 
 #comment-username{
     font-weight: bold;
 }
+
+
+/* others */
+.line{
+    border-bottom: solid 1px#C6C6C6;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+p{
+    display: inline;
+}
+
+#like-btn{
+    background: transparent;
+    border:none;
+}
+#like-btn::after{
+    background-image: url("photos/like(1).svg")
+    ;
+}
+
+#comment-btn{
+    background: transparent;
+    border:none;
+}
+#share-btn{
+    background: transparent;
+    border:none;
+}
+
+.red-like{
+    content: url("photos/like(1).svg")
+    
+}
+/* .likes */
