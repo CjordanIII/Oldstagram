@@ -9,7 +9,7 @@ let posts = [
         location: "Zundert, Netherlands",
         avatar: "photos/avatar-vangogh.jpg",
         post: "photos/post-vangogh.jpg",
-        comment: "Wish I took a nap ",
+        comment: "just took a few mushrooms lol",
         likes: 21
     },
     {
@@ -85,9 +85,9 @@ for(let i = 0; i<posts.length; i++){
         <button id="comment-btn"><img id=" coment" alt="coment" src="photos/comment.svg" /></button>
         <button id="share-btn"><img id=" share" alt="share" src="photos/share.svg" /></button>
     </section>
-    <section class="likes">
-        <p>${likes()} likes</p>
-    </section>
+    <section class="likes" id="likes${i}">
+    <p>${likes()} likes</p>
+  </section>
     <section class="comment">
         <p><span id="comment-username">${username2()}</span> ${comments()}</p>
     </section>
@@ -98,7 +98,7 @@ for(let i = 0; i<posts.length; i++){
 
 function toggle1(i) {
     let displayImage = document.getElementById(`like${i}`);
-    let likesElement = document.querySelector('.likes');
+    let likesElement = document.getElementById(`likes${i}`);
   
     if (displayImage.src.match("photos/like.svg")) {
       displayImage.src = "photos/like1.svg";
