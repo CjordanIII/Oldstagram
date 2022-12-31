@@ -9,7 +9,7 @@ let posts = [
         location: "Zundert, Netherlands",
         avatar: "photos/avatar-vangogh.jpg",
         post: "photos/post-vangogh.jpg",
-        comment: "just took a few mushrooms lol",
+        comment: "should of took a nap",
         likes: 21
     },
     {
