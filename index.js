@@ -1,6 +1,5 @@
 let main = document.getElementById("main")
 let head = document.getElementById("head")
-let btn1 = document.getElementById("like-btn")
 
 
 const posts = [
@@ -42,32 +41,11 @@ head.innerHTML =
 
 </section>`
 
-function render(){
 
-        main.innerHTML +=
-    `<section>
-        <img class="img-avatar" src=${images()} alt = avatar of ${names()}  />
-        <p id="username">${names()}</p>
-        <p id ="location">${locations()}
-    </section>
-    <section>
-        <img id="profile-pic" alt="post" src="${post()}"/>
-    </section>
-    <section class="container-2">
-        <button id="like-btn" Onclick="toggle1()"><img id=" like" alt="liked" src="photos/like.svg" /></button>
-        <button id="comment-btn"><img id=" coment" alt="coment" src="photos/comment.svg" /></button>
-        <button id="share-btn"><img id=" share" alt="share" src="photos/share.svg" /></button>
-    </section>
-    <section class="likes">
-        <p>${likes()} likes</p>
-    </section>
-    <section class="comment">
-        <p><span id="comment-username">${username2()}</span> ${comments()}</p>
-    </section>
-    <div class= "line" >
-    </div>
-    `
-}
+
+
+
+
 
 for(let i = 0; i<posts.length; i++){
     function images(){
@@ -93,19 +71,39 @@ for(let i = 0; i<posts.length; i++){
     function username2(){
         return posts[i].username
     }
- 
-    
-    render()
-
+    main.innerHTML +=
+    `<section>
+        <img class="img-avatar" src=${images()} alt = avatar of ${names()}  />
+        <p id="username">${names()}</p>
+        <p id ="location">${locations()}
+    </section>
+    <section>
+        <img id="profile-pic" alt="post" src="${post()}"/>
+    </section>
+    <section class="container-2">
+        <button id="like-btn" onclick="toggle1(${i})"><img id="like${i}" alt="liked" src="photos/like.svg" /></button>
+        <button id="comment-btn"><img id=" coment" alt="coment" src="photos/comment.svg" /></button>
+        <button id="share-btn"><img id=" share" alt="share" src="photos/share.svg" /></button>
+    </section>
+    <section class="likes">
+        <p>${likes()} likes</p>
+    </section>
+    <section class="comment">
+        <p><span id="comment-username">${username2()}</span> ${comments()}</p>
+    </section>
+    <div class= "line" >
+    </div>
+    `
 }
 
-/*    function toggle1(){
-    if(btn1.style.color=="red"){
-        btn1.style.color="grey"
-    }
-    else{
-        btn1.style.color="red"
-    }
-} 
- */
+function toggle1(i){
+    let displayImage=document.getElementById(`like${i}`)
+     console.log(displayImage)
 
+     console.log(displayImage.src.match("photos/like.svg"))
+   if(displayImage.src.match("photos/like.svg")){
+         displayImage.src = "photos/like1.svg"
+     }else{
+         displayImage.src="photos/like.svg"
+     } 
+ }
