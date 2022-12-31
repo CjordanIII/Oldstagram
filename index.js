@@ -2,7 +2,7 @@ let main = document.getElementById("main")
 let head = document.getElementById("head")
 
 
-const posts = [
+let posts = [
     {
         name: "Vincent van Gogh",
         username: "vincey1853",
@@ -96,14 +96,19 @@ for(let i = 0; i<posts.length; i++){
     `
 }
 
-function toggle1(i){
-    let displayImage=document.getElementById(`like${i}`)
-     console.log(displayImage)
+function toggle1(i) {
+    let displayImage = document.getElementById(`like${i}`);
+    let likesElement = document.querySelector('.likes');
+  
+    if (displayImage.src.match("photos/like.svg")) {
+      displayImage.src = "photos/like1.svg";
+      posts[i].likes = posts[i].likes + 1;
+    } else {
+      displayImage.src = "photos/like.svg";
+      posts[i].likes = posts[i].likes - 1;
+    }
+  
+    likesElement.innerHTML = `<p>${posts[i].likes} likes</p>`;
+  }
+  
 
-     console.log(displayImage.src.match("photos/like.svg"))
-   if(displayImage.src.match("photos/like.svg")){
-         displayImage.src = "photos/like1.svg"
-     }else{
-         displayImage.src="photos/like.svg"
-     } 
- }
